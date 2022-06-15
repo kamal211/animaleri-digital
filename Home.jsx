@@ -1,21 +1,22 @@
-import React from 'react';
-import Product from './Product';
 
-const Home = () => {
+import './App.css';
+import Home from './component/Home';
+import Navbar from './component/Navbar';
+import {Routes, Route} from 'react-router-dom';
+import Products from './component/Products';
+import Product from './component/Product';
+function App() {
   return (
-    <div className Name='hero'>
-      <div className ="card bg-dark text-white border-0">
-  <img src="/images/banner1.png" className ="card-img" alt="background "/>
-  <div className ="card-img-overlay d-flex flex-column justify-content-center">
-      <div className Name="container">
-    <h5 className ="card-title display-3 fw-bolder mb-0">Découvrir nos offres</h5>
-    <p className ="card-text lead fs-2">Lorem ipsum dolor sit amet</p>
-</div>
-  </div>
-</div>
-<Product/>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path=":products" element={<Products/>}>
+          <Route path=":productid" element={<Product/>} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
-export default Home;
+export default App;
