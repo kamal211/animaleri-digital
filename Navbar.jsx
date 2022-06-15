@@ -1,42 +1,42 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
       <nav className ="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
   <div className ="container-fluid">
-    <a className ="navbar-brand fw-bold fs-4" href="#">AFRICA</a>
+    <NavLink className ="navbar-brand fw-bold fs-4" to="/">AFRICA</NavLink>
     <button className ="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className ="navbar-toggler-icon"></span>
     </button>
     <div className ="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className ="navbar-nav mx-auto mb-2 mb-lg-0">
         <li className ="nav-item">
-          <a className ="nav-link active" aria-current="page" href="#">Home</a>
+          <NavLink className ="nav-link active" aria-current="page" to="/">Home</NavLink>
         </li>
         <li className ="nav-item">
-          <a className ="nav-link" href="#">Products</a>
-        </li>
-
-        <li className ="nav-item">
-          <a className ="nav-link" href="#">About us</a>
+          <NavLink className ="nav-link" to="/products">Products</NavLink>
         </li>
 
         <li className ="nav-item">
-          <a className ="nav-link" href="#">Contact</a>
+          <NavLink className ="nav-link" to="/about">About us</NavLink>
+        </li>
+
+        <li className ="nav-item">
+          <NavLink className ="nav-link" to="/contact">Contact</NavLink>
         </li>
        
       </ul>
       <div className Name="buttons">
-          <a href="" className Name="btn btn-outline-dark " >login <i className Name="fa fa-sign-in me-1"></i></a>
+          <NavLink to="/login" className="btn btn-outline-dark " >login <i className="fa fa-sign-in me-1"></i></NavLink>
 
       </div>
       <div className Name="buttons">
-          <a href="" className Name="btn btn-outline-dark ms-2">Register <i className Name="fa fa-user-plus me-1"></i></a>
+          <NavLink to="/login" className="btn btn-outline-dark ms-2">Register <i className="fa fa-user-plus me-1"></i></NavLink>
 
       </div>
-      <div className Name="buttons">
-          <a href="" className Name="btn btn-outline-dark ms-2 vb ">Cart <i className Name="fa fa-shopping-cart me-1"></i></a>
+      <div className="buttons">
+          <NavLink to="/login" className="btn btn-outline-dark ms-2 vb ">Cart <i className="fa fa-shopping-cart me-1"></i></NavLink>
 
       </div>
       {/* <form className ="d-flex">
